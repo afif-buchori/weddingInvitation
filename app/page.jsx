@@ -38,8 +38,8 @@ export default function Home() {
           <p className="mt-auto">{coupleData[1].initialName}</p>
         </div>
         <CountdownTime date={date + " " + startAt} />
-        <Visitor />
         <Suspense fallback={<div>Loading...</div>}>
+          <Visitor />
           <Content />
         </Suspense>
       </div>

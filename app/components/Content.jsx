@@ -80,7 +80,7 @@ function ContentMenu() {
               layoutId={selectedId.toString()}
               className={`w-full border rounded-lg glass ${
                 contents.find((i) => i.id === selectedId).isFull
-                  ? "max-w-[99%] max-h-[99%]"
+                  ? "max-w-[99%] max-h-dvh"
                   : "max-w-[90%] max-h-[80%]"
               } mx-auto flex flex-col relative z-[1]`}
               initial={{ opacity: 0 }}

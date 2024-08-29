@@ -8,7 +8,7 @@ function Visitor() {
   console.log(guestName);
 
   return (
-    <div className="w-3/4 card p-4 border border-accent-content/50 bg-base-100/40 backdrop-blur-md shadow-lg mt-5">
+    <div className="w-3/4 card p-4 border border-accent-content/50 bg-base-100/40 backdrop-blur-md shadow-lg">
       <p className="text-sm">To:</p>
       <h3 className="text-xl text-neutral-content text-center line-clamp-3">
         {guestName || "Bpk / Ibu / Saudara"}

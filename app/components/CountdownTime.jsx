@@ -50,10 +50,10 @@ function CountdownTime({ date = "2024-12-25 10:00" }) {
             key={index}
             className="flex-1 aspect-square flex flex-col items-center p-2 bg-accent glass rounded-box text-neutral-content"
           >
-            <span className="countdown font-sans font-semibold text-4xl">
+            <span className="countdown font-sans font-semibold text-3xl">
               <span style={{ "--value": unit.value }}></span>
             </span>
-            <p className="opacity-80 text-sm">{unit.label}</p>
+            <p className="opacity-80 text-[10px]">{unit.label}</p>
           </div>
         ))}
       </div>

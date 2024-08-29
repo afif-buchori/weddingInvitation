@@ -54,7 +54,7 @@ function ContentMenu() {
 
   return (
     <>
-      <div className="mt-auto sticky bottom-4 left-0 w-full grid grid-cols-5 gap-4 p-4">
+      <div className="sticky bottom-4 left-0 w-full grid grid-cols-5 gap-4 p-4">
         {contents.map((item) => (
           <motion.div
             key={item.id}
@@ -72,15 +72,15 @@ function ContentMenu() {
             <motion.div
               animate={{ backdropFilter: "blur(6px)" }}
               exit={{ backdropFilter: "blur(0px)" }}
-              transition={{ delay: 0.1, duration: 1 }}
+              transition={{ delay: 0.01, duration: 0.5 }}
               onClick={() => setSelectedId(null)}
-              className="fixed top-0 left-0 w-screen h-full bgs-secondary/80 backdrop-blur-sms z-0"
+              className="absolute top-0 left-0 w-full h-dvh bsg-secondary/80 backdrop-blur-sms z-0"
             />
             <motion.div
               layoutId={selectedId.toString()}
-              className={`w-full border rounded-lg glass ${
+              className={`w-full border rounded-lg glasss bg-primary-content/80 ${
                 contents.find((i) => i.id === selectedId).isFull
-                  ? "max-w-[99%] max-h-dvh"
+                  ? "max-w-[99%] h-dvh"
                   : "max-w-[90%] max-h-[80%]"
               } mx-auto flex flex-col relative z-[1]`}
               initial={{ opacity: 0 }}

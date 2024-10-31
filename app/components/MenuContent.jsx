@@ -60,7 +60,7 @@ function MenuContent() {
   };
 
   const itemMotion = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: -40, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
@@ -102,29 +102,13 @@ function MenuContent() {
             >
               {item.ico}
             </motion.label>
-            {/* <input
-              type="checkbox"
-              id={"my_modal_" + item.idx}
-              className="modal-toggle"
-            /> */}
-            {/* <div className="modal modal-bottom" role="dialog">
-              <div className={`modal-box max-h-[99dvh]`}>
-                <label
-                  htmlFor={"my_modal_" + item.idx}
-                  className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
-                >
-                  ✕
-                </label>
-                {item.content}
-              </div>
-            </div> */}
           </React.Fragment>
         ))}
       </motion.div>
       <input type="checkbox" id="my_modal_kuff" className="modal-toggle" />
       <div className="modal modal-bottom z-[1] backdrop-blur-sm" role="dialog">
         <div
-          className={`modal-box flex max-h-[99.8dvh] glass bg-secondary/80 p-0`}
+          className={`max-w-xl mx-auto modal-box flex max-h-[99.8dvh] glass bg-secondary/80 p-0`}
         >
           <label
             htmlFor="my_modal_kuff"
@@ -132,77 +116,13 @@ function MenuContent() {
           >
             ✕
           </label>
-          {/* <h3 className="text-lg font-bold">Hello!</h3>
-                <p className="py-4">This modal works with a hidden checkbox!</p> */}
-          {/* {item.content} */}
-
           <div className="w-full flex flex-col overflow-y-auto">
             {selectedId && contents.find((i) => i.id === selectedId)?.content}
           </div>
-          {/* {contents.find((i) => console.log(i))} */}
-          {/* {contents.find((i) => i.id === selectedId).content} */}
-          {/* <div className="modal-action">
-                  <label htmlFor={"my_modal_" + item.idx} className="btn">
-                    Close!
-                  </label>
-                </div> */}
         </div>
       </div>
     </>
   );
-  // return (
-  //   <>
-  //     <div className="sticky bottom-4 left-0 w-full grid grid-cols-5 gap-4 p-4">
-  //       {contents.map((item) => (
-  //         <motion.div
-  //           key={item.id}
-  //           layoutId={item.id.toString()}
-  //           onClick={() => setSelectedId(item.id)}
-  //           className="btn btn-square m-auto"
-  //         >
-  //           <p>{item.ico}</p>
-  //         </motion.div>
-  //       ))}
-  //     </div>
-  //     <AnimatePresence>
-  //       {selectedId && (
-  //         <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center">
-  //           <motion.div
-  //             animate={{ backdropFilter: "blur(6px)" }}
-  //             exit={{ backdropFilter: "blur(0px)" }}
-  //             transition={{ delay: 0.01, duration: 0.5 }}
-  //             onClick={() => setSelectedId(null)}
-  //             className="absolute top-0 left-0 w-full h-dvh bsg-secondary/80 backdrop-blur-sms z-0"
-  //           />
-  //           <motion.div
-  //             layoutId={selectedId.toString()}
-  //             className={`w-full border rounded-lg glasss bg-primary-content/80 ${
-  //               contents.find((i) => i.id === selectedId).isFull
-  //                 ? "max-w-[99%] h-dvh"
-  //                 : "max-w-[90%] max-h-[80%]"
-  //             } mx-auto flex flex-col relative z-[1]`}
-  //             initial={{ opacity: 0 }}
-  //             animate={{ opacity: 1 }}
-  //             exit={{ opacity: 0 }}
-  //           >
-  //             <button
-  //               onClick={() => setSelectedId(null)}
-  //               className="absolute top-0 right-0 btn btn-sm btn-circle btn-ghost z-10"
-  //             >
-  //               ✕
-  //             </button>
-  //             {contents.find((i) => i.id === selectedId).content}
-  //           </motion.div>
-  //         </div>
-  //       )}
-  //     </AnimatePresence>
-  //   </>
-  // );
-}
-
-function Modal({ content }) {
-  const [data, setData] = useState(null);
-  se;
 }
 
 export default MenuContent;

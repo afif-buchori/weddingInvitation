@@ -1,4 +1,5 @@
 import dayjs from "dayjs";
+import "dayjs/locale/id";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
@@ -6,6 +7,7 @@ import Line from "./Line";
 import { coupleData, invitationInfo } from "../weddingData";
 
 function MerriedCouple() {
+  dayjs.locale("id");
   const background = "";
   const cardVariants = {
     offscreen: {

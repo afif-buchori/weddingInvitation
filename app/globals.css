@@ -2,8 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+.shadow-up {
+  box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 -2px 4px -1px rgba(0, 0, 0, 0.06);
+}
 body {
-  @apply max-w-screen-md h-screen mx-auto relative overflow-y-auto;
+  /* @apply max-w-screen-md h-screen mx-auto relative overflow-y-auto; */
 }
 /* :root {
   --foreground-rgb: 0, 0, 0;

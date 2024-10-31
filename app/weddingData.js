@@ -1,4 +1,4 @@
-import logoImg from "@/app/assets/logo.jpg";
+import logoImg from "@/app/assets/logo.webp";
 
 export const coupleData = [
   {

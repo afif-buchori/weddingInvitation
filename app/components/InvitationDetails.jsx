@@ -2,8 +2,10 @@ import React from "react";
 import { invitationInfo } from "../weddingData";
 import dayjs from "dayjs";
 import Line from "./Line";
+import "dayjs/locale/id";
 
 function InvitationDetails() {
+  dayjs.locale("id");
   const { contractInfo, receptInfo } = invitationInfo;
   return (
     <div className="flex flex-col gap-4 overflow-y-auto pt-4 pb-10 px-4">

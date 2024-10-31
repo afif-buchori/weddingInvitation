@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logoImg from "@/app/assets/logo.jpg";
+import logoImg from "@/app/assets/logo.webp";
 import Line from "./Line";
 import { motion } from "framer-motion";
 

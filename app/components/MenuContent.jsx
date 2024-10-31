@@ -108,11 +108,12 @@ function MenuContent() {
       <input type="checkbox" id="my_modal_kuff" className="modal-toggle" />
       <div className="modal modal-bottom z-[1] backdrop-blur-sm" role="dialog">
         <div
-          className={`max-w-xl mx-auto modal-box flex max-h-[99.8dvh] glass bg-secondary/80 p-0`}
+          className={`max-w-xl mx-auto modal-box max-h-[90dvh] glass bg-secondary/80 p-0 flex flex-col ralative`}
+          // className={`max-w-xl mx-auto modal-box max-h-[99.8dvh] glass bg-secondary/80 p-0 flex flex-col ralative`}
         >
           <label
             htmlFor="my_modal_kuff"
-            className="btn btn-sm btn-circle btn-accent absolute top-2 right-2 z-10"
+            className="btn btn-sm btn-circle btn-primary absolute top-2 right-2 z-10"
           >
             ✕
           </label>

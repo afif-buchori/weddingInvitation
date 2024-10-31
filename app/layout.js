@@ -4,9 +4,9 @@ import "./globals.css";
 const inter = Kaushan_Script({ subsets: ["latin"], weight: "400" });
 
 export const metadata = {
-  title: "Wedding Invitation",
+  title: "Undangan Pernikahan",
   description:
-    "Join us in celebrating the union of Mas Kuff & Mbak Kuff as they embark on a beautiful journey together. We invite you to share in the joy and love of our special day",
+    "Bergabunglah bersama kami dalam merayakan kebersamaan Mas Kuff dan Mbak Kuff saat mereka memulai perjalanan indah bersama. Kami mengundang Anda untuk berbagi kegembiraan dan cinta di hari istimewa kami.",
 };
 
 export default function RootLayout({ children }) {
@@ -14,11 +14,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <meta
         property="og:title"
-        content="Wedding invitation by Mas Kuff & Mbak Kuff"
+        content="Undangan Pernikahan by Mas Kuff & Mbak Kuff"
       />
       <meta
         property="og:description"
-        content="Join us in celebrating the union of Mas Kuff & Mbak Kuff as they embark on a beautiful journey together. We invite you to share in the joy and love of our special day"
+        content="Bergabunglah bersama kami dalam merayakan kebersamaan Mas Kuff dan Mbak Kuff saat mereka memulai perjalanan indah bersama. Kami mengundang Anda untuk berbagi kegembiraan dan cinta di hari istimewa kami."
       />
       <meta
         property="og:image"

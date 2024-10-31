@@ -65,7 +65,7 @@ function Galery() {
               width={800}
               height={800}
               priority
-              className="object-cover opacity-20 peer-checked:opacity-80 md:hover:opacity-80 transition-opacity duration-500"
+              className="w-full h-full object-cover opacity-20 peer-checked:opacity-80 md:hover:opacity-80 transition-opacity duration-500"
             />
           </motion.label>
         );

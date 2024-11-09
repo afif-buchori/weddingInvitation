@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "name": "admin",
+        "email": "admin@wedding.inv",
+        "pass": "testingPass"
+    },
+    {
+        "id": 2,
+        "name": "masKuff",
+        "email": "a654kufc@gmail.com",
+        "pass": "testingPass"
+    }
+]

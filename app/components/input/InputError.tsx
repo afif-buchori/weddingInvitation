@@ -2,7 +2,7 @@ import { HTMLAttributes } from "react";
 
 export default function InputError({
   message,
-  className = "",
+  className = "text-end",
   ...props
 }: HTMLAttributes<HTMLParagraphElement> & { message?: string }) {
   return message ? (

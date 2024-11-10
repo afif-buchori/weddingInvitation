@@ -7,9 +7,9 @@ import Label from "@/app/components/input/Label";
 import axios from "axios";
 import { LockKeyhole, User } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import React, { useState } from "react";
 
-function FormLogin() {
+function LoginPage() {
   const router = useRouter();
   const [isLoading, setLoading] = useState(false);
   const [isError, setError] = useState({});
@@ -31,7 +31,7 @@ function FormLogin() {
         username,
         password,
       });
-      if (res.status === 200) router.push("/");
+      if (res.status === 200) router.push("/dashboard");
     } catch (error) {
       setErrFetch("*Login Failed");
       if (error.response) {
@@ -45,7 +45,7 @@ function FormLogin() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="w-full max-w-md mx-auto flex flex-col gap-4 border border-neutral/70 hover:border-neutral rounded-lg shadow-lg p-4"
+      className="w-full max-w-md mx-auto flex flex-col gap-4 border border-neutral/70 hover:border-neutral rounded-lg shadow-lg p-4 my-20"
     >
       <p className="text-xl font-medium pb-2 border-b-2 border-neutral">
         Login
@@ -81,4 +81,4 @@ function FormLogin() {
   );
 }
 
-export default FormLogin;
+export default LoginPage;

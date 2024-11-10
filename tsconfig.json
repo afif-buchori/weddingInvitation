@@ -6,12 +6,19 @@
     "strict": false,
     "noEmit": true,
     "incremental": true,
-    "module": "esnext",
+    // "module": "esnext",
     "esModuleInterop": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    // "moduleResolution": "node",
+    "target": "ESNext",
+    "module": "ESNext",
+    "baseUrl": ".",
+    // "paths": {
+    //   "@/*": ["src/*"]
+    // },
     "paths": {
       "@/*": ["./*"]
     },

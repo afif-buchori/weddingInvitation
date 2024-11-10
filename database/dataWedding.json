@@ -1,26 +1,26 @@
 {
-    "maleInfo": {
-        "initial": "Mas Kuff",
-        "full_name": "Muchamad Afif Buchori",
-        "gender": "Putra",
-        "parent": "Pak Muhh"
-    },
-    "femaleInfo": {
-        "initial": "Mbak Dahh",
-        "full_name": "Nur Khamidah",
-        "gender": "Putra",
-        "parent": "Buk Muhh"
-    },
-    "contractInfo": {
-        "date": "2024-12-02",
-        "start_at": "08:30",
-        "end_at": "10:30",
-        "location": "Aula Masjid ABRI Cimahi - Jalan Gatot Subroto Kota Cimahi"
-    },
-    "receptInfo": {
-        "date": "2024-12-03",
-        "start_at": "10:30",
-        "end_at": null,
-        "location": "Aula Masjid ABRI Cimahi - Jalan Gatot Subroto Kota Cimahi"
-    }
+  "maleInfo": {
+    "initial": "Mas Kuff",
+    "full_name": "Muchamad Afif Buchori",
+    "gender": "Putra",
+    "parent": "Pak Muhh"
+  },
+  "femaleInfo": {
+    "initial": "Mbak Dahh",
+    "full_name": "Nur Khamidah",
+    "gender": "Putri",
+    "parent": "Buk Muhh"
+  },
+  "contractInfo": {
+    "date": "2024-12-02",
+    "start_at": "08:30",
+    "end_at": "10:30",
+    "location": "Aula Masjid ABRI Cimahi - Jalan Gatot Subroto Kota Cimahi"
+  },
+  "receptInfo": {
+    "date": "2024-12-03",
+    "start_at": "10:30",
+    "end_at": null,
+    "location": "Aula Masjid ABRI Cimahi - Jalan Gatot Subroto Kota Cimahi"
+  }
 }

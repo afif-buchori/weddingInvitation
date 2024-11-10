@@ -21,17 +21,17 @@ const InputText = forwardRef((props: FormInputProps, ref: FormInputRef) => {
     primary: clsx([
       "focus:input-primary",
       inputGroup && "focus:border-primary",
-      inputGroup?.error ? "border-error" : "border-secondary",
+      inputGroup && (inputGroup?.error ? "border-error" : "border-secondary"),
     ]),
     secondary: "",
   };
+
   return (
     <input
       {...computedProps}
       ref={ref}
       className={clsx([
-        "flex-1 focus:!outline-none",
-        props.error && "input-error",
+        "w-full flex-1 focus:!outline-none",
         inputGroup && "h-full",
         !inputGroup?.size && !props.inputSize && "input-xs min-h-10",
         props.inputSize === "sm" && "input-xs min-h-8",
@@ -39,6 +39,8 @@ const InputText = forwardRef((props: FormInputProps, ref: FormInputRef) => {
         props.rounded && "rounded-full",
         inputGroup
           ? "rounded-none first:rounded-l last:rounded-r z-10 first:border-r last:border-l"
+          : props.error
+          ? "input input-error"
           : "input input-secondary",
         inputGroup && !props.inputSize && "px-4 py-0",
         inputGroup && props.inputSize === "sm" && "px-2 py-0",

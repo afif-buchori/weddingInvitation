@@ -9,7 +9,9 @@ interface LabelProps {
 const Label: React.FC<LabelProps> = ({ label, className, children }) => {
   return (
     <label className={className}>
-      <p className="text-xs sm:text-sm font-medium mb-1">{label}</p>
+      <p className="text-xs sm:text-sm font-medium mb-1 capitalize opacity-70">
+        {label}
+      </p>
       {children}
     </label>
   );

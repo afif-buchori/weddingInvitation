@@ -13,12 +13,18 @@ import InvitationDetails from "./InvitationDetails";
 import Galery from "./Galery";
 import Comment from "./Comment";
 
-function MenuContent() {
+function MenuContent({ dataProps }) {
   const contents = [
     {
       id: 1,
       ico: <UserRound />,
-      content: <MerriedCouple />,
+      content: (
+        <MerriedCouple
+          dataMale={dataProps.maleInfo}
+          dataFemale={dataProps.femaleInfo}
+          dataContract={dataProps.contractInfo}
+        />
+      ),
       isFull: false,
     },
     {
@@ -30,7 +36,13 @@ function MenuContent() {
     {
       id: 3,
       ico: <MapPin />,
-      content: <MerriedCouple />,
+      content: (
+        <MerriedCouple
+          dataMale={dataProps.maleInfo}
+          dataFemale={dataProps.femaleInfo}
+          dataContract={dataProps.contractInfo}
+        />
+      ),
       isFull: false,
     },
     {

@@ -5,8 +5,9 @@ import Image from "next/image";
 import React from "react";
 import Line from "./Line";
 import { coupleData, invitationInfo } from "../weddingData";
+import logoImg from "@/app/assets/logo.webp";
 
-function MerriedCouple() {
+function MerriedCouple({ dataMale, dataFemale, dataContract }) {
   dayjs.locale("id");
   const background = "";
   const cardVariants = {
@@ -39,16 +40,13 @@ function MerriedCouple() {
         </p>
         <div className="w-4/5 mx-auto card gap-2 p-4 border bg-base-100/20">
           <p className="text-center border-b pb-1">
-            {dayjs(invitationInfo.contractInfo.date).format(
-              "dddd, DD MMMM YYYY"
-            )}
+            {dayjs(dataContract.date).format("dddd, DD MMMM YYYY")}
           </p>
-          <p className="leading-5 text-center">
-            di {invitationInfo.contractInfo.loc}
-          </p>
+          <p className="leading-5 text-center">di {dataContract.location}</p>
         </div>
       </div>
-      {coupleData.map((item, idx) => (
+      {/* {coupleData.map((item, idx) => ( */}
+      {[dataMale, dataFemale].map((item, idx) => (
         <React.Fragment key={idx}>
           {idx > 0 && (
             <Line className="mt-10 w-4/5" />
@@ -75,7 +73,8 @@ function MerriedCouple() {
             <div className="splash" style={{ background }} />
             <motion.div className="card z-0 w-fit" variants={cardVariants}>
               <Image
-                src={item.imageUser}
+                src={logoImg}
+                // src={item.imageUser}
                 alt="Logo Wedding"
                 width={160}
                 height={160}
@@ -85,11 +84,11 @@ function MerriedCouple() {
             </motion.div>
             <div className="w-60 card items-center z-[1] mt-10 py-2 px-4 border bg-base-100/70 shadow-lg">
               <p className="text-accent-content text-center text-2xl leading-5">
-                {item.merriedName}
+                {item.full_name}
               </p>
               <p>{item.gender} dari</p>
               <p className="text-accent-content text-center text-2xl leading-5">
-                {item.parrentName}
+                {item.parent}
               </p>
             </div>
           </motion.div>

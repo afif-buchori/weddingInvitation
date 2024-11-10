@@ -5,7 +5,7 @@ import React from "react";
 function Visitor() {
   const searchParams = useSearchParams();
   const guestName = searchParams.get("to");
-  console.log(guestName);
+  // console.log(guestName);
 
   return (
     <div className="w-3/4 card p-4 border border-accent-content/50 bg-base-100/40 backdrop-blur-md shadow-lg">

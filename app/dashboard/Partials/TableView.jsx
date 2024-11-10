@@ -1,5 +1,8 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
+import ModalEdit from "@/app/dashboard/Partials/ModalEdit";
+import Button from "@/app/components/button/Button";
+import { PencilLine } from "lucide-react";
 
 function TableView({ weddingData = {} }) {
   const renderRows = (data) => {
@@ -15,30 +18,48 @@ function TableView({ weddingData = {} }) {
   };
 
   const dataList = [
-    { detail: renderRows(weddingData.maleInfo), title: "Male" },
-    { detail: renderRows(weddingData.femaleInfo), title: "Female" },
+    { detail: weddingData.maleInfo, keyData: "maleInfo", title: "Male" },
+    { detail: weddingData.femaleInfo, keyData: "femaleInfo", title: "Female" },
     {
-      detail: renderRows(weddingData.contractInfo),
+      detail: weddingData.contractInfo,
+      keyData: "contractInfo",
       title: "Akad Nikah / Marriage contract",
     },
     {
-      detail: renderRows(weddingData.receptInfo),
+      detail: weddingData.receptInfo,
+      keyData: "receptInfo",
       title: "Resepsi Nikah / Marriage Reception",
     },
   ];
+
+  const [isOpen, setOpen] = useState(null);
+
   return (
     <>
+      <ModalEdit isOpen={isOpen} onClose={() => setOpen(null)} />
       <h1>Wedding Data</h1>
       <table className="table table-xs sm:table-sm">
         <tbody>
           {dataList.map((item, idx) => (
             <React.Fragment key={idx}>
               <tr>
-                <th colSpan={3} className="text-end uppercase text-primary">
-                  {item.title}
+                <th
+                  colSpan={3}
+                  className="text-end uppercase text-primary !pt-10"
+                >
+                  <div className="flex justify-end items-center gap-4">
+                    <p>{item.title}</p>
+                    <Button
+                      onClick={() => setOpen(item)}
+                      variant="secondary"
+                      size="sm"
+                    >
+                      <PencilLine size={14} />
+                    </Button>
+                  </div>
                 </th>
               </tr>
-              {item.detail}
+              {renderRows(item.detail)}
             </React.Fragment>
           ))}
         </tbody>
